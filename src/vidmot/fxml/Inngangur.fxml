@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.controllers.InngangurController">
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../stylesheet.css">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <ImageView blendMode="COLOR_BURN" fitHeight="400.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="20.0">
+                <effect>
+                    <Reflection fraction="0.5" topOpacity="0.1" />
+                </effect>
+                <Image url="@../Myndir/snakeLogo2.png" />
+            </ImageView>
+            <Label text="nákur" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="65.0">
+                <font>
+                    <Font name="Lucida Sans Demibold Italic" size="96.0" />
+                </font>
+                <textFill>
+                    <LinearGradient>
+                        <stops>
+                            <Stop>
+                                <color>
+                                    <Color />
+                                </color>
+                            </Stop>
+                            <Stop offset="0.9974489795918366">
+                                <color>
+                                    <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                                </color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color>
+                                    <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                                </color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </textFill>
+                <effect>
+                    <Reflection fraction="0.5" topOpacity="0.1" />
+                </effect>
+            </Label>
+        </AnchorPane>
+        <Button mnemonicParsing="false" onAction="#einnHandler" prefHeight="50.0" prefWidth="180.0" style="-fx-font-size: 20;" text="1 leikmaður">
+            <VBox.margin>
+                <Insets left="325.0" top="50.0" />
+            </VBox.margin>
+        </Button>
+        <Button layoutX="260.0" layoutY="210.0" mnemonicParsing="false" onAction="#tveirHandler" prefHeight="50.0" prefWidth="180.0" style="-fx-font-size: 20;" text="2 leikmenn">
+            <VBox.margin>
+                <Insets left="325.0" top="30.0" />
+            </VBox.margin>
+        </Button>
+        <Button layoutX="310.0" layoutY="380.0" mnemonicParsing="false" onAction="#tankHandler" prefHeight="50.0" prefWidth="180.0" style="-fx-font-size: 20;" text="Tank">
+            <VBox.margin>
+                <Insets left="325.0" top="30.0" />
+            </VBox.margin>
+        </Button>
+    </VBox>
+</Pane>

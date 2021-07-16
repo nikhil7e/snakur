@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.controllers.EinnStillingarController">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <HBox.margin>
+            <Insets left="45.0" top="35.0" />
+        </HBox.margin>
+        <Label text="Stillingar" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="Lucida Sans Demibold Italic" size="40.0" />
+            </font>
+            <textFill>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9974489795918366">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Label layoutX="290.0" layoutY="75.0" text="1 leikmaður" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="85.0">
+            <font>
+                <Font name="Lucida Sans Demibold Roman" size="30.0" />
+            </font>
+            <textFill>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9974489795918366">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </AnchorPane>
+    <Label prefHeight="200.0" prefWidth="400.0" text="Leikmaður (örvalyklar) reynir að borða eins mikinn mat og hann getur án þess að rekast á eitursnáka sem birtast. Vinsamlegast veldu erfiðleikastig. Þú getur fengið fleiri upplýsinga um hvert stig með því að færa músina yfir hnappana." textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <VBox.margin>
+            <Insets left="200.0" top="-100.0" />
+        </VBox.margin>
+        <HBox.margin>
+            <Insets left="45.0" top="35.0" />
+        </HBox.margin>
+        <padding>
+            <Insets top="20.0" />
+        </padding>
+    </Label>
+    <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+        <VBox.margin>
+            <Insets left="120.0" top="10.0" />
+        </VBox.margin>
+        <ToggleButton mnemonicParsing="false" onAction="#lettHandler" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Létt">
+            <tooltip>
+                <Tooltip text="Minni líkur á að eitursnákar birtist.&#10;Minni líkur á að eitursnákar skipti&#10;um stefnu.&#10;Hraði snáks eykst lítið &#10;þegar matur er borðaður.&#10;">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Tooltip>
+            </tooltip>
+        </ToggleButton>
+        <ToggleButton mnemonicParsing="false" onAction="#midlungsHandler" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Miðlungs">
+            <tooltip>
+                <Tooltip text="Eitursnákar birtast reglulega.&#10;Eitursnákar skipta um stefnu  &#10;reglulega.&#10;Hraði snáks eykst nokkuð &#10;þegar matur er borðaður.&#10;">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Tooltip>
+            </tooltip>
+        </ToggleButton>
+        <ToggleButton mnemonicParsing="false" onAction="#erfittHandler" prefHeight="50.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Erfitt">
+            <tooltip>
+                <Tooltip text="Miklar líkur á að eitursnákar birtist.&#10;Miklar líkur á að eitursnákar skipti&#10;um stefnu.&#10;Hraði snáks eykst mikið &#10;þegar matur er borðaður.&#10;">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Tooltip>
+            </tooltip>
+        </ToggleButton>
+    </HBox>
+    <ToggleButton maxHeight="50.0" minHeight="50.0" mnemonicParsing="false" onAction="#veggirEitradirHandler" prefHeight="50.0" prefWidth="180.0" style="-fx-font-size: 20;" text="Classic Snake" VBox.vgrow="NEVER">
+        <tooltip>
+            <Tooltip text="Snákur deyr þegar hann snertir&#10;vegg. &#10;Engir eitursnákar birtast.">
+                <font>
+                    <Font size="11.0" />
+                </font>
+            </Tooltip>
+        </tooltip>
+        <VBox.margin>
+            <Insets left="315.0" />
+        </VBox.margin>
+    </ToggleButton>
+    <HBox maxWidth="800.0" minWidth="800.0" prefHeight="100.0" prefWidth="800.0" spacing="50.0" VBox.vgrow="NEVER">
+        <Button mnemonicParsing="false" onAction="#tilBaka1Handler" prefHeight="50.0" prefWidth="120.0" style="-fx-font-size: 18; -fx-background-color: linear-gradient(#FF0000, #F27272);" text="Til baka" HBox.hgrow="NEVER">
+            <HBox.margin>
+                <Insets left="50.0" top="20.0" />
+            </HBox.margin>
+        </Button>
+        <Label fx:id="fxValLabel" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" text="Erfiðleikastig: Miðlungs. Classic: Nei." HBox.hgrow="NEVER">
+            <font>
+                <Font name="System Italic" size="16.0" />
+            </font>
+            <HBox.margin>
+                <Insets left="70.0" top="40.0" />
+            </HBox.margin>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#aframHandler" prefHeight="50.0" prefWidth="120.0" style="-fx-font-size: 20; -fx-background-color: linear-gradient(#72FE69, #9CE2A8);" text="Áfram" HBox.hgrow="NEVER">
+            <HBox.margin>
+                <Insets left="45.0" top="20.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

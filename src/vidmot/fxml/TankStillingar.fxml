@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.controllers.TankStillingarController">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <Label text="Stillingar" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="Lucida Sans Demibold Italic" size="40.0" />
+            </font>
+            <textFill>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9974489795918366">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Label layoutX="290.0" layoutY="75.0" text="Tank" AnchorPane.leftAnchor="365.0" AnchorPane.topAnchor="85.0">
+            <font>
+                <Font name="Lucida Sans Demibold Roman" size="30.0" />
+            </font>
+            <textFill>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9974489795918366">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.1550377607345581" green="0.40789473056793213" blue="0.018884016200900078" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </AnchorPane>
+    <Label prefHeight="200.0" prefWidth="400.0" text="Leikmaður 1 (örvatakkar og Ctrl, græni snákurinn) og leikmaður 2 (WASD og Space, rauði eitursnákurinn) reyna að skjóta hvern annan. Hægt er að hafa í mesta lagi 2 byssuskot á leikborði á hverjum tíma. Vinsamlegast tilgreindu hversu mörg líf leikmenn skulu hafa og hvort veggir skulu vera eitraðir." textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font size="17.0" />
+        </font>
+        <VBox.margin>
+            <Insets left="200.0" top="-90.0" />
+        </VBox.margin>
+    </Label>
+    <TextField fx:id="fxFjoldiLifa" maxWidth="75.0" prefWidth="75.0" promptText="Fjöldi lífa">
+        <VBox.margin>
+            <Insets bottom="30.0" left="370.0" />
+        </VBox.margin>
+    </TextField>
+    <ToggleButton mnemonicParsing="false" onAction="#veggirEitradirHandler" prefHeight="50.0" prefWidth="180.0" style="-fx-font-size: 20;" text="Veggir eitraðir">
+        <tooltip>
+            <Tooltip text="Snákurinn og eitursnákurinn deyja&#10;þegar þeir rekast á vegg.">
+                <font>
+                    <Font size="11.0" />
+                </font>
+            </Tooltip>
+        </tooltip>
+        <VBox.margin>
+            <Insets left="315.0" />
+        </VBox.margin>
+    </ToggleButton>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <Button mnemonicParsing="false" onAction="#tilBaka2Handler" prefHeight="50.0" prefWidth="120.0" style="-fx-font-size: 18; -fx-background-color: linear-gradient(#FF0000, #F27272);" text="Til baka">
+            <HBox.margin>
+                <Insets left="50.0" top="30.0" />
+            </HBox.margin>
+        </Button>
+        <Label fx:id="fxValLabel" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Fjöldi lífa: 1. Veggir eitraðir: Nei.">
+            <font>
+                <Font name="System Italic" size="16.0" />
+            </font>
+            <HBox.margin>
+                <Insets left="120.0" top="40.0" />
+            </HBox.margin>
+        </Label>
+        <Button fx:id="fxAfram" mnemonicParsing="false" onAction="#aframHandler" prefHeight="50.0" prefWidth="120.0" style="-fx-font-size: 20; -fx-background-color: linear-gradient(#72FE69, #9CE2A8);" text="Áfram">
+            <HBox.margin>
+                <Insets left="40.0" top="30.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>
